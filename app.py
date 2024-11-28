@@ -167,11 +167,11 @@ def main():
         if transcription:
             st.write("**Original Transcription:**")
             st.write(transcription)
-
+            st.write("**Refined Transcription for Medical Terms through Generative AI:**")
             st.info("Refining transcription with Groq...")
             refined_transcription = refine_transcription_with_groq(transcription)
             if refined_transcription:
-                st.write("Refined Transcription for Medical Terms through Generative AI:")
+                st.write("**Refined Transcription:**")
                 st.json(refined_transcription.dict())
 
                 target_language = st.selectbox(
